@@ -409,119 +409,120 @@
 
     </footer>
 
+<!-- SEARCH SCRIPT -->
+<script>
 
-    <!-- SEARCH SCRIPT -->
-    <script>
+    const searchInput = document.getElementById("searchInput");
+    const searchResults = document.getElementById("searchResults");
 
-        const searchInput = document.getElementById("searchInput");
-        const searchResults = document.getElementById("searchResults");
+    const products = [
 
-        const products = [
+        {
+            name: "Hand Grip 40KG",
+            category: "Fitness",
+            page: "fitness.html"
+        },
 
-            {
-                name: "Hand Grip 40KG",
-                page: "fitness.html"
-            },     
+        {
+            name: "Hand Grip simple",
+            category: "Fitness",
+            page: "fitness.html"
+        },
 
-             {
-                name: "Hand Grip simple",
-                page: "fitness.html"
-            },    
-            
-            {
-                name: "Ballon Select",
-                category: "Ballons",
-                page: "football.html"
-            },
+        {
+            name: "Ballon Select",
+            category: "Football - Ballons",
+            page: "ballons.html"
+        },
 
-            {
-                name: "Ballon Hummel",
-                category: "Ballons",
-                page: "ballon.html"
-            },
+        {
+            name: "Ballon Hummel",
+            category: "Football - Ballons",
+            page: "ballons.html"
+        },
 
-            {
-                name: "Football",
-                category: "Football",
-                page: "football.html"
-            },
+        {
+            name: "Football",
+            category: "Football",
+            page: "football.html"
+        },
 
-            {
-                name: "Fitness",
-                category: "Fitness",
-                page: "fitness.html"
-            },
+        {
+            name: "Fitness",
+            category: "Fitness",
+            page: "fitness.html"
+        },
 
-            {
-                name: "Natation",
-                category: "Natation",
-                page: "natation.html"
-            },
+        {
+            name: "Natation",
+            category: "Natation",
+            page: "natation.html"
+        },
 
-            {
-                name: "Sport Combat",
-                category: "Sport Combat",
-                page: "sport-combat.html"
-            }
+        {
+            name: "Sport Combat",
+            category: "Sport Combat",
+            page: "sport-combat.html"
+        }
 
-        ];
-
-
-        searchInput.addEventListener("input", function () {
-
-            const search = this.value.toLowerCase().trim();
-
-            searchResults.innerHTML = "";
-
-            if (search === "") {
-                searchResults.style.display = "none";
-                return;
-            }
+    ];
 
 
-            const results = products.filter(product =>
-                product.name.toLowerCase().includes(search) ||
-                product.category.toLowerCase().includes(search)
-            );
+    searchInput.addEventListener("input", function () {
+
+        const search = this.value.toLowerCase().trim();
+
+        searchResults.innerHTML = "";
+
+        if (search === "") {
+            searchResults.style.display = "none";
+            return;
+        }
 
 
-            if (results.length === 0) {
+        const results = products.filter(product =>
+            product.name.toLowerCase().includes(search) ||
+            (product.category || "").toLowerCase().includes(search)
+        );
 
-                searchResults.innerHTML = `
-                    <div class="search-result">
-                        Aucun produit trouvé.
-                    </div>
+
+        if (results.length === 0) {
+
+            searchResults.innerHTML = `
+                <div class="search-result">
+                    Aucun produit trouvé.
+                </div>
+            `;
+
+        } else {
+
+            results.forEach(product => {
+
+                searchResults.innerHTML += `
+                    <a
+                        href="${product.page}"
+                        class="search-result"
+                    >
+                        <div class="result-name">
+                            ${product.name}
+                        </div>
+
+                        <div class="result-category">
+                            ${product.category}
+                        </div>
+                    </a>
                 `;
 
-            } else {
+            });
 
-                results.forEach(product => {
-
-                    searchResults.innerHTML += `
-                        <a
-                            href="${product.page}"
-                            class="search-result"
-                        >
-                            <div class="result-name">
-                                ${product.name}
-                            </div>
-
-                            <div class="result-category">
-                                ${product.category}
-                            </div>
-                        </a>
-                    `;
-
-                });
-
-            }
+        }
 
 
-            searchResults.style.display = "block";
+        searchResults.style.display = "block";
 
-        });
+    });
 
-    </script>
+</script>
 
 </body>
 </html>
