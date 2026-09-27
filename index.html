@@ -347,7 +347,9 @@
             <!-- FOOTBALL -->
             <a href="football.html" class="sport-card">
                 <div class="sport-icon">⚽</div>
+
                 <h3>Football</h3>
+
                 <p>
                     Équipements, tenues et accessoires
                     pour les passionnés du football.
@@ -358,7 +360,9 @@
             <!-- NATATION -->
             <a href="natation.html" class="sport-card">
                 <div class="sport-icon">🏊</div>
+
                 <h3>Natation</h3>
+
                 <p>
                     Équipements et accessoires dédiés à la natation.
                 </p>
@@ -368,7 +372,9 @@
             <!-- SPORT COMBAT -->
             <a href="sport-combat.html" class="sport-card">
                 <div class="sport-icon">🥊</div>
+
                 <h3>Sport Combat</h3>
+
                 <p>
                     Gants, bandages, protège-tibias et équipements de combat.
                 </p>
@@ -378,7 +384,9 @@
             <!-- FITNESS -->
             <a href="fitness.html" class="sport-card">
                 <div class="sport-icon">🏋️</div>
+
                 <h3>Fitness</h3>
+
                 <p>
                     Équipements et accessoires pour le fitness et la musculation.
                 </p>
@@ -387,12 +395,16 @@
 
             <!-- DIVERS -->
             <div class="sport-card">
+
                 <div class="sport-icon">🛍️</div>
+
                 <h3>Matériel sportif divers</h3>
+
                 <p>
                     Une sélection d'articles et
                     d'accessoires pour différents sports.
                 </p>
+
             </div>
 
         </div>
@@ -409,126 +421,137 @@
 
     </footer>
 
-<!-- SEARCH SCRIPT -->
-<script>
 
-    const searchInput = document.getElementById("searchInput");
-    const searchResults = document.getElementById("searchResults");
+    <!-- SEARCH SCRIPT -->
+    <script>
 
-    const products = [
+        const searchInput = document.getElementById("searchInput");
+        const searchResults = document.getElementById("searchResults");
 
-        {
-            name: "Hand Grip 40KG",
-            category: "Fitness",
-            page: "fitness.html"
-        },
+        const products = [
 
-        {
-            name: "Hand Grip simple",
-            category: "Fitness",
-            page: "fitness.html"
-        },
+            {
+                name: "Hand Grip 40KG",
+                category: "Fitness",
+                page: "fitness.html",
+                keywords: "hand grip 40kg grip fitness"
+            },
 
-        {
-            name: "Ballon Select",
-            category: "Football",
-            page: "ballon.html"
-        },
+            {
+                name: "Hand Grip simple",
+                category: "Fitness",
+                page: "fitness.html",
+                keywords: "hand grip simple grip fitness"
+            },
 
-        {
-            name: "Ballon Hummel",
-            category: "Football",
-            page: "ballon.html"
-        },
+            {
+                name: "Ballon Select",
+                category: "Football",
+                page: "ballon.html",
+                keywords: "ballon select football"
+            },
 
-        {
-            name: "Football",
-            category: "Football",
-            page: "football.html"
-        },
+            {
+                name: "Ballon Hummel",
+                category: "Football",
+                page: "ballon.html",
+                keywords: "ballon hummel football"
+            },
 
-        {
-            name: "Fitness",
-            category: "Fitness",
-            page: "fitness.html"
-        },
+            {
+                name: "Football",
+                category: "Football",
+                page: "football.html",
+                keywords: "football ballon"
+            },
 
-        {
-            name: "Natation",
-            category: "Natation",
-            page: "natation.html"
-        },
+            {
+                name: "Fitness",
+                category: "Fitness",
+                page: "fitness.html",
+                keywords: "fitness musculation"
+            },
 
-        {
-            name: "Sport Combat",
-            category: "Sport Combat",
-            page: "sport-combat.html"
-        },
-        
-        {
-            name: "Les Gants",
-            category: "Sport Combat"
-            page: "gants-boxe.html",
-        }
-        
-    ];
+            {
+                name: "Natation",
+                category: "Natation",
+                page: "natation.html",
+                keywords: "natation piscine"
+            },
 
+            {
+                name: "Sport Combat",
+                category: "Sport Combat",
+                page: "sport-combat.html",
+                keywords: "sport combat boxe"
+            },
 
-    searchInput.addEventListener("input", function () {
+            {
+                name: "Les Gants",
+                category: "Sport Combat",
+                page: "gants-boxe.html",
+                keywords: "les gants gants gant gants de boxe gant de boxe boxe boxing sport combat"
+            }
 
-        const search = this.value.toLowerCase().trim();
-
-        searchResults.innerHTML = "";
-
-        if (search === "") {
-            searchResults.style.display = "none";
-            return;
-        }
+        ];
 
 
-        const results = products.filter(product =>
-            product.name.toLowerCase().includes(search) ||
-            (product.category || "").toLowerCase().includes(search)
-        );
+        searchInput.addEventListener("input", function () {
+
+            const search = this.value.toLowerCase().trim();
+
+            searchResults.innerHTML = "";
+
+            if (search === "") {
+                searchResults.style.display = "none";
+                return;
+            }
 
 
-        if (results.length === 0) {
+            const results = products.filter(product =>
+                product.name.toLowerCase().includes(search) ||
+                (product.category || "").toLowerCase().includes(search) ||
+                (product.keywords || "").toLowerCase().includes(search)
+            );
 
-            searchResults.innerHTML = `
-                <div class="search-result">
-                    Aucun produit trouvé.
-                </div>
-            `;
 
-        } else {
+            if (results.length === 0) {
 
-            results.forEach(product => {
-
-                searchResults.innerHTML += `
-                    <a
-                        href="${product.page}"
-                        class="search-result"
-                    >
-                        <div class="result-name">
-                            ${product.name}
-                        </div>
-
-                        <div class="result-category">
-                            ${product.category}
-                        </div>
-                    </a>
+                searchResults.innerHTML = `
+                    <div class="search-result">
+                        Aucun produit trouvé.
+                    </div>
                 `;
 
-            });
+            } else {
 
-        }
+                results.forEach(product => {
+
+                    searchResults.innerHTML += `
+                        <a
+                            href="${product.page}"
+                            class="search-result"
+                        >
+                            <div class="result-name">
+                                ${product.name}
+                            </div>
+
+                            <div class="result-category">
+                                ${product.category}
+                            </div>
+                        </a>
+                    `;
+
+                });
+
+            }
 
 
-        searchResults.style.display = "block";
+            searchResults.style.display = "block";
 
-    });
+        });
 
-</script>
+    </script>
 
 </body>
 </html>
