@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WIN SPORT - Gants de boxe</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #ffffff;
+            color: #1e293b;
+        }
+
+        header {
+            background: #ef4444;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.10);
+        }
+
+        .logo {
+            color: white;
+            font-size: 30px;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 55px 20px;
+            background: linear-gradient(135deg, #ffffff, #fee2e2);
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            color: #dc2626;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: #64748b;
+            font-size: 18px;
+        }
+
+        .product-section {
+            padding: 50px 7%;
+            text-align: center;
+        }
+
+        .product-card {
+            max-width: 500px;
+            margin: auto;
+            padding: 25px;
+            border: 2px solid #fee2e2;
+            border-radius: 18px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .product-card img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 14px;
+            margin-bottom: 25px;
+        }
+
+        .product-card h2 {
+            color: #dc2626;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            background: #fee2e2;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        .buttons a {
+            color: white;
+            text-decoration: none;
+            padding: 13px 22px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .whatsapp {
+            background: #22c55e;
+        }
+
+        .messenger {
+            background: #2563eb;
+        }
+
+        .back {
+            text-align: center;
+            margin: 20px 0 50px;
+        }
+
+        .back a {
+            display: inline-block;
+            background: #ef4444;
+            color: white;
+            text-decoration: none;
+            padding: 13px 28px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #ef4444;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            WIN SPORT
+        </div>
+
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="sport-combat.html">Sport Combat</a>
+        </nav>
+
+    </header>
+
+    <section class="hero">
+
+        <h1>🥊 Gants de boxe</h1>
+
+        <p>
+            Gants de boxe disponibles en plusieurs tailles.
+        </p>
+
+    </section>
+
+    <section class="product-section">
+
+        <div class="product-card">
+
+            <img src="gants boxe.jpg" alt="Gants de boxe">
+
+            <h2>Gants de boxe</h2>
+
+            <div class="price">
+                N° 4 à 6 — 3600 DA
+            </div>
+
+            <div class="price">
+                N° 8 à 14 — 3800 DA
+            </div>
+
+            <div class="buttons">
+
+                <a class="whatsapp"
+                   href="https://wa.me/213770335774?text=Bonjour%2C%20je%20suis%20intéressé%20par%20les%20Gants%20de%20boxe."
+                   target="_blank">
+                    Commander sur WhatsApp
+                </a>
+
+                <a class="messenger"
+                   href="https://m.me/"
+                   target="_blank">
+                    Commander sur Messenger
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="back">
+
+        <a href="sport-combat.html">
+            ← Retour à Sport Combat
+        </a>
+
+    </div>
+
+    <footer>
+
+        <p>
+            © 2026 WIN SPORT — Tous droits réservés.
+        </p>
+
+    </footer>
+
+</body>
+</html>
