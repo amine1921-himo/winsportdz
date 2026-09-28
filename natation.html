@@ -55,7 +55,6 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
-            margin-bottom: 40px;
         }
 
         .category {
@@ -64,6 +63,15 @@
             border-radius: 15px;
             text-align: center;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .category:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
         }
 
         .category-icon {
@@ -81,73 +89,6 @@
             line-height: 1.5;
         }
 
-        .products-title {
-            text-align: center;
-            color: #0077b6;
-            margin-bottom: 25px;
-            font-size: 28px;
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .product {
-            background: white;
-            padding: 20px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-        }
-
-        .product-image {
-            width: 100%;
-            height: 260px;
-            object-fit: contain;
-            display: block;
-            margin-bottom: 15px;
-            border-radius: 12px;
-        }
-
-        .product h3 {
-            color: #222;
-            margin-bottom: 10px;
-            font-size: 20px;
-        }
-
-        .price {
-            color: #0077b6;
-            font-size: 21px;
-            font-weight: bold;
-            margin-bottom: 18px;
-        }
-
-        .order-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .order-buttons a {
-            text-decoration: none;
-            padding: 10px 15px;
-            border-radius: 8px;
-            color: white;
-            font-weight: bold;
-            font-size: 14px;
-        }
-
-        .whatsapp {
-            background: #25D366;
-        }
-
-        .messenger {
-            background: #0084FF;
-        }
-
         footer {
             background: #0077b6;
             color: white;
@@ -159,10 +100,6 @@
         @media (max-width: 800px) {
 
             .category-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .product-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
@@ -180,14 +117,6 @@
 
             .category-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .product-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .product-image {
-                height: 220px;
             }
 
         }
@@ -214,144 +143,128 @@
         </a>
 
 
-        <!-- CATEGORIES -->
-
         <div class="category-grid">
 
-            <div class="category">
 
-                <div class="category-icon">🥽</div>
+            <!-- LUNETTES -->
 
-                <h2>Lunettes</h2>
+            <a href="#" class="category">
+
+                <div class="category-icon">
+                    🥽
+                </div>
+
+                <h2>
+                    Lunettes
+                </h2>
 
                 <p>
                     Lunettes de natation pour
                     entraînement et compétition.
                 </p>
 
-            </div>
+            </a>
 
 
-            <div class="category">
+            <!-- MAILLOTS -->
 
-                <div class="category-icon">🩱</div>
+            <a href="#" class="category">
 
-                <h2>Maillots</h2>
+                <div class="category-icon">
+                    🩱
+                </div>
+
+                <h2>
+                    Maillots
+                </h2>
 
                 <p>
                     Maillots de natation pour
                     hommes et femmes.
                 </p>
 
-            </div>
+            </a>
 
 
-            <div class="category">
+            <!-- BONNETS -->
 
-                <div class="category-icon">🧢</div>
+            <a href="bonnet.html" class="category">
 
-                <h2>Bonnets</h2>
+                <div class="category-icon">
+                    🧢
+                </div>
+
+                <h2>
+                    Bonnets
+                </h2>
 
                 <p>
                     Bonnets de natation pour
                     adultes et enfants.
                 </p>
 
-            </div>
+            </a>
 
 
-            <div class="category">
+            <!-- ACCESSOIRES -->
 
-                <div class="category-icon">🏊</div>
+            <a href="#" class="category">
 
-                <h2>Accessoires</h2>
+                <div class="category-icon">
+                    🏊
+                </div>
+
+                <h2>
+                    Accessoires
+                </h2>
 
                 <p>
                     Accessoires pratiques pour
                     la natation.
                 </p>
 
-            </div>
+            </a>
 
 
-            <div class="category">
+            <!-- MATERIEL D'ENTRAINEMENT -->
 
-                <div class="category-icon">🛟</div>
+            <a href="#" class="category">
 
-                <h2>Matériel d'entraînement</h2>
+                <div class="category-icon">
+                    🛟
+                </div>
+
+                <h2>
+                    Matériel d'entraînement
+                </h2>
 
                 <p>
                     Matériel pour améliorer
                     vos entraînements.
                 </p>
 
-            </div>
+            </a>
 
 
-            <div class="category">
+            <!-- SACS -->
 
-                <div class="category-icon">🎒</div>
+            <a href="#" class="category">
 
-                <h2>Sacs</h2>
+                <div class="category-icon">
+                    🎒
+                </div>
+
+                <h2>
+                    Sacs
+                </h2>
 
                 <p>
                     Sacs pratiques pour transporter
                     votre matériel de natation.
                 </p>
 
-            </div>
+            </a>
 
-        </div>
-
-
-        <!-- PRODUITS -->
-
-        <h2 class="products-title">
-            Bonnets de Natation
-        </h2>
-
-
-        <div class="product-grid">
-
-            <!-- BONNET DE NATATION PM -->
-
-            <div class="product">
-
-                <img
-                    src="bonnet de natation PM.jpg"
-                    alt="Bonnet de Natation PM"
-                    class="product-image"
-                >
-
-                <h3>
-                    Bonnet de Natation PM
-                </h3>
-
-                <p class="price">
-                    500 DA
-                </p>
-
-                <div class="order-buttons">
-
-                    <a
-                        class="whatsapp"
-                        href="https://wa.me/213770335774?text=Bonjour%20WIN%20Sport%2C%20je%20veux%20commander%20le%20Bonnet%20de%20Natation%20PM%20%C3%A0%20500%20DA."
-                        target="_blank"
-                    >
-                        🟢 WhatsApp
-                    </a>
-
-                    <a
-                        class="messenger"
-                        href="https://m.me/100076120771882"
-                        target="_blank"
-                    >
-                        🔵 Messenger
-                    </a>
-
-                </div>
-
-            </div>
 
         </div>
 
