@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WIN SPORT - Accessoires</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #ffffff;
+            color: #1e293b;
+        }
+
+        header {
+            background: #38bdf8;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.10);
+        }
+
+        .logo {
+            color: white;
+            font-size: 30px;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #075985;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 70px 20px;
+            background: linear-gradient(135deg, #ffffff, #e0f7ff);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            color: #0284c7;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            color: #64748b;
+            font-size: 18px;
+        }
+
+        .products {
+            padding: 60px 7%;
+        }
+
+        .products h2 {
+            text-align: center;
+            color: #0284c7;
+            font-size: 35px;
+            margin-bottom: 40px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .product {
+            border: 2px solid #e0f2fe;
+            border-radius: 16px;
+            padding: 25px 20px;
+            text-align: center;
+            background: white;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+            transition: 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-7px);
+            border-color: #38bdf8;
+        }
+
+        .product-image {
+            width: 100%;
+            max-width: 280px;
+            height: 280px;
+            object-fit: contain;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .product h3 {
+            color: #0284c7;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .product p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        .price {
+            color: #0284c7;
+            font-size: 21px;
+            font-weight: bold;
+            margin: 12px 0;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .buttons a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 7px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .whatsapp {
+            background: #25D366;
+        }
+
+        .messenger {
+            background: #0084FF;
+        }
+
+        .back {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .back a {
+            display: inline-block;
+            background: #38bdf8;
+            color: white;
+            text-decoration: none;
+            padding: 13px 28px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #38bdf8;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 800px) {
+
+            header {
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            WIN SPORT
+        </div>
+
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="football.html">Football</a>
+        </nav>
+
+    </header>
+
+
+    <section class="hero">
+
+        <h1>⚽ Accessoires</h1>
+
+        <p>
+            Accessoires de football disponibles chez WIN SPORT.
+        </p>
+
+    </section>
+
+
+    <section class="products">
+
+        <h2>Accessoires Football</h2>
+
+
+        <div class="product-grid">
+
+
+            <!-- BRASSARD CAPITAINE -->
+
+            <div class="product">
+
+                <img
+                    src="capitane.jpg"
+                    alt="Brassard Capitaine"
+                    class="product-image"
+                >
+
+                <h3>Brassard Capitaine</h3>
+
+                <p>
+                    Brassard de capitaine pour joueur de football.
+                </p>
+
+                <div class="price">
+                    500 DA
+                </div>
+
+
+                <div class="buttons">
+
+                    <a
+                        class="whatsapp"
+                        href="https://wa.me/213770335774?text=Bonjour%20WIN%20SPORT,%20je%20suis%20intéressé%20par%20le%20Brassard%20Capitaine%20à%20500%20DA."
+                        target="_blank"
+                    >
+                        WhatsApp
+                    </a>
+
+
+                    <a
+                        class="messenger"
+                        href="https://m.me/100076120771882"
+                        target="_blank"
+                    >
+                        Messenger
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <div class="back">
+
+        <a href="football.html">
+            ← Retour au Football
+        </a>
+
+    </div>
+
+
+    <footer>
+
+        <p>
+            © 2026 WIN SPORT — Tous droits réservés.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
