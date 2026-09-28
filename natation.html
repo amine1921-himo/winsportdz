@@ -4,268 +4,222 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>WIN SPORT - Natation</title>
+<title>WIN SPORT - Natation</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+<style>
 
-        body {
-            background: #ffffff;
-            color: #1e293b;
-        }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: #ffffff;
+        color: #1e293b;
+    }
+
+    header {
+        background: #38bdf8;
+        padding: 20px 7%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 3px 15px rgba(0,0,0,0.10);
+    }
+
+    .logo {
+        color: white;
+        font-size: 30px;
+        font-weight: 900;
+        letter-spacing: 2px;
+    }
+
+    nav {
+        display: flex;
+        gap: 25px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        color: #075985;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 80px 20px;
+        background: linear-gradient(135deg, #ffffff, #e0f7ff);
+    }
+
+    .hero h1 {
+        font-size: 55px;
+        color: #0284c7;
+        margin-bottom: 15px;
+    }
+
+    .hero p {
+        color: #64748b;
+        font-size: 19px;
+    }
+
+    .products {
+        padding: 60px 7%;
+    }
+
+    .products h2 {
+        text-align: center;
+        color: #0284c7;
+        font-size: 35px;
+        margin-bottom: 40px;
+    }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .product {
+        border: 2px solid #e0f2fe;
+        border-radius: 16px;
+        padding: 20px;
+        text-align: center;
+        background: white;
+        box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+        transition: 0.3s;
+    }
+
+    .product:hover {
+        transform: translateY(-7px);
+        border-color: #38bdf8;
+        box-shadow: 0 10px 25px rgba(56,189,248,0.20);
+    }
+
+    .product-icon {
+        font-size: 55px;
+        margin-bottom: 15px;
+    }
+
+    .product-image {
+        width: 100%;
+        height: 260px;
+        object-fit: contain;
+        display: block;
+        margin-bottom: 15px;
+        border-radius: 12px;
+    }
+
+    .product h3 {
+        color: #0284c7;
+        margin-bottom: 10px;
+        font-size: 23px;
+    }
+
+    .product p {
+        color: #64748b;
+        line-height: 1.6;
+    }
+
+    .price {
+        font-size: 22px;
+        font-weight: bold;
+        color: #0f172a;
+        margin: 12px 0 15px;
+    }
+
+    .order-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .order-buttons a {
+        display: inline-block;
+        padding: 8px 10px;
+        border-radius: 7px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 13px;
+        transition: 0.2s;
+        flex: 1;
+    }
+
+    .whatsapp {
+        background: #25D366;
+    }
+
+    .whatsapp:hover {
+        background: #1ebe5d;
+    }
+
+    .messenger {
+        background: #0084FF;
+    }
+
+    .messenger:hover {
+        background: #006fda;
+    }
+
+    .back {
+        text-align: center;
+        margin: 40px 0;
+    }
+
+    .back a {
+        display: inline-block;
+        background: #38bdf8;
+        color: white;
+        text-decoration: none;
+        padding: 13px 28px;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .back a:hover {
+        background: #0284c7;
+        transform: translateY(-2px);
+    }
+
+    footer {
+        background: #38bdf8;
+        color: white;
+        text-align: center;
+        padding: 25px;
+        margin-top: 30px;
+    }
+
+    @media (max-width: 800px) {
 
         header {
-            background: #38bdf8;
-            padding: 20px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.10);
-        }
-
-        .logo {
-            color: white;
-            font-size: 30px;
-            font-weight: 900;
-            letter-spacing: 2px;
+            flex-direction: column;
+            gap: 18px;
         }
 
         nav {
-            display: flex;
-            gap: 25px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #075985;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #ffffff, #e0f7ff);
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .hero h1 {
-            font-size: 55px;
-            color: #0284c7;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            color: #64748b;
-            font-size: 19px;
-        }
-
-        .products {
-            padding: 60px 7%;
-        }
-
-        .products h2 {
-            text-align: center;
-            color: #0284c7;
-            font-size: 35px;
-            margin-bottom: 40px;
+            font-size: 42px;
         }
 
         .product-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            grid-template-columns: 1fr;
         }
 
-        .product {
-            border: 2px solid #e0f2fe;
-            border-radius: 16px;
-            padding: 35px 20px;
-            text-align: center;
-            background: white;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.06);
-            transition: 0.3s;
+        .product-image {
+            height: 220px;
         }
 
-        .product:hover {
-            transform: translateY(-7px);
-            border-color: #38bdf8;
-            box-shadow: 0 10px 25px rgba(56,189,248,0.20);
-        }
+    }
 
-        .product-icon {
-            font-size: 55px;
-            margin-bottom: 15px;
-        }
-
-        .product h3 {
-            color: #0284c7;
-            margin-bottom: 10px;
-        }
-
-        .product p {
-            color: #64748b;
-            line-height: 1.6;
-        }
-
-        .back {
-            text-align: center;
-            margin: 40px 0;
-        }
-
-        .back a {
-            display: inline-block;
-            background: #38bdf8;
-            color: white;
-            text-decoration: none;
-            padding: 13px 28px;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .back a:hover {
-            background: #0284c7;
-            transform: translateY(-2px);
-        }
-
-        footer {
-            background: #38bdf8;
-            color: white;
-            text-align: center;
-            padding: 25px;
-            margin-top: 30px;
-        }
-
-        @media (max-width: 800px) {
-
-            header {
-                flex-direction: column;
-                gap: 18px;
-            }
-
-            nav {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .hero h1 {
-                font-size: 42px;
-            }
-
-            .product-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-    <header>
-
-        <div class="logo">
-            WIN SPORT
-        </div>
-
-        <nav>
-            <a href="index.html">Accueil</a>
-            <a href="football.html">Football</a>
-            <a href="natation.html">Natation</a>
-        </nav>
-
-    </header>
-
-    <section class="hero">
-
-        <h1>🏊 Natation</h1>
-
-        <p>
-            Tout l'équipement nécessaire pour les passionnés de natation.
-        </p>
-
-    </section>
-
-    <section class="products">
-
-        <h2>Équipement Natation</h2>
-
-        <div class="product-grid">
-
-            <div class="product">
-                <div class="product-icon">🥽</div>
-                <h3>Lunettes</h3>
-                <p>
-                    Lunettes de natation pour l'entraînement et la pratique sportive.
-                </p>
-            </div>
-
-            <div class="product">
-                <div class="product-icon">🩱</div>
-                <h3>Maillots</h3>
-                <p>
-                    Maillots de bain adaptés à la pratique de la natation.
-                </p>
-            </div>
-
-            <div class="product">
-                <div class="product-icon">🧢</div>
-                <h3>Bonnets</h3>
-                <p>
-                    Bonnets de natation pour l'entraînement et la compétition.
-                </p>
-            </div>
-
-            <div class="product">
-                <div class="product-icon">🏊</div>
-                <h3>Accessoires</h3>
-                <p>
-                    Accessoires utiles pour la pratique et l'entraînement.
-                </p>
-            </div>
-
-            <div class="product">
-                <div class="product-icon">🛟</div>
-                <h3>Matériel d'entraînement</h3>
-                <p>
-                    Matériel destiné à l'apprentissage et au perfectionnement.
-                </p>
-            </div>
-
-            <div class="product">
-                <div class="product-icon">🎒</div>
-                <h3>Sacs</h3>
-                <p>
-                    Sacs pratiques pour transporter votre équipement de natation.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <div class="back">
-
-        <a href="index.html">
-            ← Retour à l'accueil
-        </a>
-
-    </div>
-
-    <footer>
-
-        <p>
-            © 2026 WIN SPORT — Tous droits réservés.
-        </p>
-
-    </footer>
-
-</body>
-</html>
+</style>
