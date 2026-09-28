@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WIN SPORT - Matériel d'entraînement</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f7fb;
+            color: #222;
+        }
+
+        header {
+            background: #0077b6;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 25px;
+            text-decoration: none;
+            color: #0077b6;
+            font-weight: bold;
+        }
+
+        .products-title {
+            text-align: center;
+            color: #0077b6;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .product {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+            display: block;
+            margin-bottom: 15px;
+            border-radius: 12px;
+        }
+
+        .product h3 {
+            color: #222;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .price {
+            color: #0077b6;
+            font-size: 21px;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+
+        .order-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .order-buttons a {
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .whatsapp {
+            background: #25D366;
+        }
+
+        .messenger {
+            background: #0084FF;
+        }
+
+        footer {
+            background: #0077b6;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 800px) {
+
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 500px) {
+
+            header h1 {
+                font-size: 26px;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-image {
+                height: 260px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>🏊 WIN SPORT</h1>
+
+        <p>Matériel d'entraînement</p>
+
+    </header>
+
+
+    <div class="container">
+
+        <a href="natation.html" class="back">
+            ← Retour à la Natation
+        </a>
+
+
+        <h2 class="products-title">
+            Matériel d'entraînement
+        </h2>
+
+
+        <div class="product-grid">
+
+
+            <!-- CEINTURE DE NATATION GM -->
+
+            <div class="product">
+
+                <img
+                    src="cienture de natation GM.jpg"
+                    alt="Ceinture de Natation GM"
+                    class="product-image"
+                >
+
+                <h3>
+                    Ceinture de Natation GM
+                </h3>
+
+                <p class="price">
+                    1400 DA
+                </p>
+
+                <div class="order-buttons">
+
+                    <a
+                        class="whatsapp"
+                        href="https://wa.me/213770335774?text=Bonjour%20WIN%20Sport%2C%20je%20veux%20commander%20la%20Ceinture%20de%20Natation%20GM%20%C3%A0%201400%20DA."
+                        target="_blank"
+                    >
+                        🟢 WhatsApp
+                    </a>
+
+                    <a
+                        class="messenger"
+                        href="https://m.me/100076120771882"
+                        target="_blank"
+                    >
+                        🔵 Messenger
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CEINTURE DE NATATION PM -->
+
+            <div class="product">
+
+                <img
+                    src="cienture de natation PM.jpg"
+                    alt="Ceinture de Natation PM"
+                    class="product-image"
+                >
+
+                <h3>
+                    Ceinture de Natation PM
+                </h3>
+
+                <p class="price">
+                    1000 DA
+                </p>
+
+                <div class="order-buttons">
+
+                    <a
+                        class="whatsapp"
+                        href="https://wa.me/213770335774?text=Bonjour%20WIN%20Sport%2C%20je%20veux%20commander%20la%20Ceinture%20de%20Natation%20PM%20%C3%A0%201000%20DA."
+                        target="_blank"
+                    >
+                        🟢 WhatsApp
+                    </a>
+
+                    <a
+                        class="messenger"
+                        href="https://m.me/100076120771882"
+                        target="_blank"
+                    >
+                        🔵 Messenger
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <p>
+            © 2026 WIN SPORT - Tous droits réservés
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
